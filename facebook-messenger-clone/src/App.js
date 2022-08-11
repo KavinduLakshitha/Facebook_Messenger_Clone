@@ -9,6 +9,7 @@ import "firebase/compat/firestore";
 import FlipMove from "react-flip-move";
 import SendIcon from "@mui/icons-material/Send";
 import { IconButton } from "@mui/material";
+import { Helmet } from "react-helmet";
 
 function App() {
   const [input, setInput] = useState("");
@@ -52,12 +53,17 @@ function App() {
   return (
     <div className="App">
       <div className="container">
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>Messenger-ish</title>
+        </Helmet>
         <img
+          className="app__image"
           src="https://www.freepnglogos.com/uploads/facebook-messenger-png/file-facebook-messenger-logo-svg-wikipedia-9.png"
           alt=""
           width="100px"
         />
-        <h1>Hello🚀</h1>
+        <h1 className="h1__title">Messenger-Ish-Application🧬</h1>
         <form className="app__form">
           <FormControl className="app__formControl">
             <input
