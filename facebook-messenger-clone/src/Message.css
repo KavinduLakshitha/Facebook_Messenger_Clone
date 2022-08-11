@@ -11,9 +11,15 @@
 }
 
 .message_userCard {
-    background-color: #0b81ff !important;
+    background-color: #0b81ff !important;    
+    color: white !important;
+    border-radius: 20px!important;
+    box-shadow: none!important;     
 }
 
 .message_guestCard {
-    background-color: #e9e9eb !important;
+    background-color: rgba(233, 233, 235, 0.7) !important;
+    color: black !important;
+    border-radius: 20px!important;
+    box-shadow: none!important;
 }

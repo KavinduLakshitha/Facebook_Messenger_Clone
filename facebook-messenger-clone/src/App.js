@@ -51,40 +51,39 @@ function App() {
 
   return (
     <div className="App">
-      <img
-        src="https://www.freepnglogos.com/uploads/facebook-messenger-png/file-facebook-messenger-logo-svg-wikipedia-9.png"
-        alt=""
-        width="100px"
-      />
-      <h1>Hello🚀</h1>
-
-      <form className="app__form">
-        <FormControl className="app__formControl">
-          <Input
-            className="app_input"
-            placeholder="Enter a message..."
-            value={input}
-            onChange={(event) => setInput(event.target.value)}
-          />
-
-          <IconButton
-            className="app_iconButton"
-            variant="contained"
-            type="submit"
-            onClick={sendMessage}
-            disabled={!input}
-            color="primary"
-          >
-            <SendIcon />
-          </IconButton>
-        </FormControl>
-      </form>
-
-      <FlipMove>
-        {messages.map(({ id, message }) => (
-          <Message key={id} username={username} message={message} />
-        ))}
-      </FlipMove>
+      <div className="container">
+        <img
+          src="https://www.freepnglogos.com/uploads/facebook-messenger-png/file-facebook-messenger-logo-svg-wikipedia-9.png"
+          alt=""
+          width="100px"
+        />
+        <h1>Hello🚀</h1>
+        <form className="app__form">
+          <FormControl className="app__formControl">
+            <input
+              className="app_input"
+              placeholder="Enter a message..."
+              value={input}
+              onChange={(event) => setInput(event.target.value)}
+            />
+            <IconButton
+              className="app_iconButton"
+              variant="contained"
+              type="submit"
+              onClick={sendMessage}
+              disabled={!input}
+              color="primary"
+            >
+              <SendIcon />
+            </IconButton>
+          </FormControl>
+        </form>
+        <FlipMove>
+          {messages.map(({ id, message }) => (
+            <Message key={id} username={username} message={message} />
+          ))}
+        </FlipMove>
+      </div>
     </div>
   );
 }
